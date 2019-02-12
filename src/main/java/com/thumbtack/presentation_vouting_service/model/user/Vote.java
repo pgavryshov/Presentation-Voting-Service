@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Vote {
-    String id;
+    Long id;
     @Setter
     @Getter
     String advice;

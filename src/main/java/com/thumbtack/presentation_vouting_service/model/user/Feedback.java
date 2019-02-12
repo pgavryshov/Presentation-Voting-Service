@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Feedback {
-    private String id;
+    Long id;
     @Getter
     @Setter
     private String test;

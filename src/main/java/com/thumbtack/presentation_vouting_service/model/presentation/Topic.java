@@ -6,14 +6,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Topic {
-    String id;
+    @Getter
+    @Setter
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
     @Getter
     @Setter
     String category;

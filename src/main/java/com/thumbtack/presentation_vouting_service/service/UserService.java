@@ -4,7 +4,7 @@ import com.thumbtack.presentation_vouting_service.model.user.User;
 
 import java.util.ArrayList;
 
-public interface UserService {
+public interface UserService{
 
     ArrayList listAll();
 

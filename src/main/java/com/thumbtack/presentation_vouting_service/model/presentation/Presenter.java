@@ -1,5 +1,6 @@
 package com.thumbtack.presentation_vouting_service.model.presentation;
 
+import com.thumbtack.presentation_vouting_service.model.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,4 +15,7 @@ public class Presenter {
     @Getter
     @Setter
     Presentation presentation;
+    @Getter
+    @Setter
+    User user;
 }

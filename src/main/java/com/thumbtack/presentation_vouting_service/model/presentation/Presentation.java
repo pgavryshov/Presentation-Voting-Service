@@ -14,7 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Presentation {
-    String id;
+    Long id;
     @Getter
     @Setter
     String name;
