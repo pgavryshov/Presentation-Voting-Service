@@ -1,4 +1,4 @@
-package com.thumbtack.presentation_vouting_service.model.employee;
+package com.thumbtack.presentation_vouting_service.model.user;
 
 import com.thumbtack.presentation_vouting_service.model.presentation.Presentation;
 import lombok.AllArgsConstructor;
@@ -15,7 +15,7 @@ public class Vote {
     String advice;
     @Setter
     @Getter
-    Employee user;
+    User user;
     @Setter
     @Getter
     Presentation presentation;

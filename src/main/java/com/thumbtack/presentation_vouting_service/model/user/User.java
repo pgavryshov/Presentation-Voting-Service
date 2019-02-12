@@ -1,15 +1,20 @@
-package com.thumbtack.presentation_vouting_service.model.employee;
+package com.thumbtack.presentation_vouting_service.model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import javax.persistence.*;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee {
+@Entity
+public class User {
+    @Getter
+    @Setter
+    @Id
     String id;
     @Getter
     @Setter
@@ -29,8 +34,8 @@ public class Employee {
     @Getter
     @Setter
     String photo;
-    @Setter
-    @Getter
-    List<Role> roleList;
-
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
+    @Enumerated(EnumType.STRING)
+    private Set<Role> roles;
 }

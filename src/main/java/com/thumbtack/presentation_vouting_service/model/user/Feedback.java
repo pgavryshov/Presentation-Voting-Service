@@ -1,6 +1,6 @@
-package com.thumbtack.presentation_vouting_service.model.presentation;
+package com.thumbtack.presentation_vouting_service.model.user;
 
-import com.thumbtack.presentation_vouting_service.model.user.User;
+import com.thumbtack.presentation_vouting_service.model.presentation.Presentation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,22 +10,21 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@AllArgsConstructor
 @NoArgsConstructor
-public class Topic {
-    String id;
+@AllArgsConstructor
+public class Feedback {
+    private String id;
     @Getter
     @Setter
-    String category;
+    private String test;
     @Getter
     @Setter
-    String goal;
-    @Getter
-    @Setter
-    String targetAudienceRequirements;
-    @Setter
-    @Getter
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User author;
+    @Getter
+    @Setter
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    Presentation presentation;
 }

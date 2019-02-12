@@ -1,7 +1,7 @@
 package com.thumbtack.presentation_vouting_service.model.presentation;
 
-import com.thumbtack.presentation_vouting_service.model.employee.Employee;
-import com.thumbtack.presentation_vouting_service.model.employee.Feedback;
+import com.thumbtack.presentation_vouting_service.model.user.Feedback;
+import com.thumbtack.presentation_vouting_service.model.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -31,7 +32,7 @@ public class Presentation {
     List<Presenter> presenters;
     @Setter
     @Getter
-    Employee author;
+    User author;
     @Getter
     @Setter
     List<Feedback> feedbackList;
@@ -47,4 +48,8 @@ public class Presentation {
     @Getter
     @Setter
     LocalDateTime endVotingTime;
+    @Getter
+    @Setter
+    PresentationStatus presentationStatus;
+    Set<Feedback> feedbackSet;
 }
